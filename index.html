@@ -1,1 +1,26 @@
-aaaaaa
+<html>
+  <body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyB3G0bnrsFpQ_W1gu5ISKWqjLeqWgMITso",
+        authDomain: "practice-karirin.firebaseapp.com",
+        projectId: "practice-karirin",
+        storageBucket: "practice-karirin.appspot.com",
+        messagingSenderId: "797929749228",
+        appId: "1:797929749228:web:bc74177d952f819a0203c9",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script>
+      firebase.firestore().collection("names").add({ name: "karin" });
+    </script>
+  </body>
+</html>

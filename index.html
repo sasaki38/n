@@ -21,7 +21,16 @@
       firebase.initializeApp(firebaseConfig);
     </script>
     <script>
-      firebase.firestore().collection("names").add({ name: "souichirou" });
+      //   firebase.firestore().collection("names").add({ name: "souichirou" });
+      firebase
+        .firestore()
+        .collection("names")
+        .get()
+        .then((snapshot) => {
+          snapshot.docs.forEach((doc) => {
+            console.log(doc.data());
+          });
+        });
     </script>
   </body>
 </html>

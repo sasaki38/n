@@ -45,6 +45,9 @@
           document.getElementById("result").innerText = results.join(",");
         });
     </script>
+    <script>
+      document.yomikomi().innnerText = results.join(",");
+    </script>
   </body>
   <script>
     function touroku() {
@@ -52,8 +55,24 @@
       firebase
         .firestore()
         .collection("moji")
-        .add({ name: `${inputMoji}` });
+        .doc("a")
+        .set({ name: `${inputMoji}` });
       //window.alert(`入力されたのは${inputMoji}です`);
+    }
+    function yomikomi() {
+      //データを取ってくる
+      firebase
+        .firestore()
+        .collection("names")
+        .doc("a")
+        .get()
+        .then((ss) => {
+          if (ss.exists) {
+            window.alert(`保存されたのは${ss.data().input}です`);
+          } else {
+            window.alert("データの読み込みに失敗しました");
+          }
+        });
     }
   </script>
 </html>

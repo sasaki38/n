@@ -66,7 +66,7 @@
         .get()
         .then((ss) => {
           if (ss.exists) {
-            window.alert(`保存されたのは${ss.data().input}です`);
+            window.alert(`保存されたのは${ss.data().name}です`);
           } else {
             window.alert("データの読み込みに失敗しました");
           }

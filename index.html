@@ -4,7 +4,7 @@
   </head>
   <body>
     <h2>データを入力してください</h2>
-    <input type="text" id="moji" />
+    <input type="text" id="Moji" />
     <button onclick="touroku()">登録</button>
     <span id="result"></span>
 
@@ -30,7 +30,12 @@
     </script>
     <script>
       //   firebase.firestore().collection("names").add({ name: "souichirou" });
-      firebase.firestore().collection("moji");
+      function touroku() {
+        firebase.firestore().collection("moji").add.getElementById("Moji");
+        //let inputMoji = document.getElementById("moji").value;
+        //window.alert(`入力されたのは${inputMoji}です`);
+      }
+      //firebase.firestore().collection("moji");
       firebase
         .firestore()
         .collection("names")

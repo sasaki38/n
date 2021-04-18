@@ -1,5 +1,11 @@
 <html>
+  <head>
+    <meta charset="utf-8" />
+  </head>
   <body>
+    <h2>データを入力してください</h2>
+    <input type="text" id="moji" />
+    <button onclick="touroku()">登録</button>
     <span id="result"></span>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -24,6 +30,7 @@
     </script>
     <script>
       //   firebase.firestore().collection("names").add({ name: "souichirou" });
+      firebase.firestore().collection("moji");
       firebase
         .firestore()
         .collection("names")

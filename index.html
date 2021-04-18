@@ -45,9 +45,6 @@
           document.getElementById("result").innerText = results.join(",");
         });
     </script>
-    <script>
-      document.yomikomi().innnerText = results.join(",");
-    </script>
   </body>
   <script>
     function touroku() {
@@ -63,7 +60,7 @@
       //データを取ってくる
       firebase
         .firestore()
-        .collection("names")
+        .collection("moji")
         .doc("a")
         .get()
         .then((ss) => {

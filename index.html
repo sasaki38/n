@@ -29,9 +29,12 @@
       firebase.initializeApp(firebaseConfig);
     </script>
     <script>
-      //   firebase.firestore().collection("names").add({ name: "souichirou" });
+      //  firebase.firestore().collection("names").add({ name: "souichirou" });
       function touroku() {
-        firebase.firestore().collection("moji").add.getElementById("Moji");
+        firebase
+          .firestore()
+          .collection("moji")
+          .add({ name: getElementById("Moji") });
         //let inputMoji = document.getElementById("moji").value;
         //window.alert(`入力されたのは${inputMoji}です`);
       }

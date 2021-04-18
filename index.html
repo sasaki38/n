@@ -30,18 +30,11 @@
     </script>
     <script>
       //  firebase.firestore().collection("names").add({ name: "souichirou" });
-      function touroku() {
-        firebase
-          .firestore()
-          .collection("moji")
-          .add({ name: getElementById("Moji") });
-        //let inputMoji = document.getElementById("moji").value;
-        //window.alert(`入力されたのは${inputMoji}です`);
-      }
+
       //firebase.firestore().collection("moji");
       firebase
         .firestore()
-        .collection("moji")
+        .collection("names")
         .get()
         .then((snapshot) => {
           const results = [];
@@ -53,4 +46,14 @@
         });
     </script>
   </body>
+  <script>
+    function touroku() {
+      let inputMoji = document.getElementById("moji").value;
+      firebase
+        .firestore()
+        .collection("moji")
+        .add({ name: `${inputMoji}` });
+      //window.alert(`入力されたのは${inputMoji}です`);
+    }
+  </script>
 </html>
